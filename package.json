@@ -16,7 +16,9 @@
     "socket.io": "^4.8.1"
   },
   "devDependencies": {
+    "@types/ioredis": "^4.28.10",
     "@types/jsonwebtoken": "^9.0.9",
+    "@types/pg": "^8.15.4",
     "@types/socket.io": "^3.0.1",
     "nodemon": "^3.1.10",
     "ts-node": "^10.9.2"
