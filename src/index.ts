@@ -38,11 +38,10 @@ const io = new Server(httpServer, {
 // });
 
 redis.on("message", (channel, message) => {
-  if (channel == "shard_debug") {
-    io.emit("shard_debug", message);
-  }
+  io.emit(channel, message);
 });
 redis.subscribe("shard_debug");
+redis.subscribe("resharding");
 
 io.on("connection", (socket: any) => {
   console.log("Client connected:", socket.id);
