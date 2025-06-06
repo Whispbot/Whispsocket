@@ -1,8 +1,10 @@
+import "./instrument.js";
 import redis from "./database/redis.js";
 import { createServer } from "http";
 import { Server } from "socket.io";
 import jwt from "jsonwebtoken";
 import { User } from "./types.js";
+import * as Sentry from "@sentry/node";
 
 const PORT = process.env.PORT || 4000;
 
